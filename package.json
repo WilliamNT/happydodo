@@ -1,0 +1,28 @@
+{
+  "name": "happydodo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "dependencies": {
+    "@consumet/extensions": "^1.5.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/mysql": "^2.15.23",
+    "@types/node": "^20.8.10",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.2.2"
+  }
+}
