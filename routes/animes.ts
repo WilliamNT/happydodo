@@ -40,7 +40,6 @@ animes.get("/animes/:id", async (req: Request, res: Response<ApiMessage | AnimeD
                 return res.status(404).json(createApiError(404, 'Anime not found'));
             }
 
-             // We don't need these yet
              const anime = {...r[0]};
 
             c.query('SELECT tag FROM tags LEFT JOIN tag_bindings ON tag_bindings.tag_id = tags.id WHERE tag_bindings.anime_id = ?;', [id], (_e, r) => {
@@ -211,7 +210,6 @@ animes.get("/search/:query", async (req: Request, res: Response<ApiMessage | Ani
                 const tags: AnimeTag[] = a.tag_list ? a.tag_list.split(',') : [];
             
                 return {
-                    isError: false,
                     id: a.id,
                     title: a.title,
                     synonyms: synonyms,
