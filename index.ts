@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 // Routers
 import animes from './routes/animes';
@@ -9,6 +10,8 @@ dotenv.config();
 const port = process.env.EXPRESS_PORT;
 
 const app = express();
+
+app.use(cors());
 
 app.use('/animes', animes);
 app.use('/feed', feed);
