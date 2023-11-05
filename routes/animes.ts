@@ -39,8 +39,6 @@ animes.get('/:id', async (req: Request, res: Response<IApiMessage | AnimeDto>) =
     res.json(mapToAnimeDto(rows[0]));
 });
 
-export default animes;
-
 animes.get('/:id/mappings', async (req: Request, res: Response<IApiMessage | MappingDto>) => {
     const id = req.params.id;
     if (!id || isNaN(parseInt(id, 10))) {
@@ -81,3 +79,5 @@ animes.get('/:id/related', async (req: Request, res: Response<IApiMessage | Mapp
     const results = rows.map((row) => mapToMappingDto(row));
     return res.json(results);
 });
+
+export default animes;
