@@ -1,7 +1,9 @@
+import { RowDataPacket } from "mysql2";
+
 /**
  * Maps `animeId` to the different anime providers.
  */
-export type ProviderMapping = {
+export interface IProviderMapping extends RowDataPacket {
     id: number;
     anime_id: number;
     anidb?: string;
@@ -19,7 +21,7 @@ export type ProviderMapping = {
 /**
  * Stores the provider ids of the related animes of anime with `animeId`.
  */
-export type RelationMapping = {
+export interface IRelationMapping extends RowDataPacket {
     id: number;
     anime_id: number;
     anidb?: string;

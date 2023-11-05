@@ -1,7 +1,9 @@
+import { RowDataPacket } from "mysql2";
+
 /**
  * A tag related to one or more animes.
  */
-export type AnimeTag = {
+export interface IAnimeTag extends RowDataPacket {
     id: number;
     tag: string;
     dataAdded: Date;
@@ -11,7 +13,7 @@ export type AnimeTag = {
 /**
  * A relationship between a tag and anime.
  */
-export type TagBinding = {
+export interface ITagBinding extends RowDataPacket {
     id: number;
     animeId: number;
     tagId: number;

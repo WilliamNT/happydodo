@@ -1,3 +1,5 @@
+import { RowDataPacket } from "mysql2";
+
 /**
  * Type of the anime.
  * If  unknown, `UNKNOWN` is the value.
@@ -39,7 +41,7 @@ export enum AnimeSeason {
  * 
  * Has many types of metadata related to the anime.
  */
-export type Anime = {
+export interface IAnime extends RowDataPacket {
     id: number;
     title: string;
     type?: AnimeType

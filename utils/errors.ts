@@ -1,6 +1,6 @@
-import { ApiMessage } from "../models/api_message";
+import { IApiMessage } from "../models/api_message";
 
-export function createApiError(code: number, message?: string): ApiMessage {
+export function createApiError(code: number, message?: string): IApiMessage {
     if (!message) {
         if (code === 500) {
             message = 'API error';
