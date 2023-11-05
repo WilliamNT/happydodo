@@ -1,6 +1,6 @@
 # HappyDodo API
 
-My own anime metadata API. Database schema can be found in the `anime_offline_dataset` repository.
+My own anime metadata API. Database schema can be found in the `anime_offline_dataset` repository (private).
 
 ## Endpoints
 
